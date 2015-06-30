@@ -2,7 +2,7 @@ var Hapi = require('hapi');
 
 var server = new Hapi.Server();
 server.connection({
-	port: 3000
+	port: process.env.PORT || 8080
 });
 
 server.ext('onRequest', function(request, reply){
